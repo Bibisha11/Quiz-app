@@ -1,0 +1,129 @@
+/* RESET */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+body {
+    background: url("https://i.pinimg.com/736x/3f/a2/6e/3fa26e4fba360373b85d2ddd98d1f65e.jpg") 
+                no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Main container */
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+/* Header icons */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.profile {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.menu {
+    font-size: 45px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Title */
+.title {
+    margin-top: 5px;
+    font-size: 46px;
+    font-weight: 800;
+}
+
+/* Grid layout for buttons */
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 330px);
+    gap: 25px;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+/* Button style */
+.genre-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Solid colors (NO gradient) */
+.blue { background: #9bd7ff; }
+.green { background: #8ff5cb; }
+.brown { background: #f3b48a; }
+.orange { background: #f8a5a5; }
+
+/* Hover effect */
+.genre-btn:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+/* Quiz Overview */
+.overview-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.quiz-stats {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    margin: 15px 0 25px;
+}
+
+.quiz-stats div {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* Reward text */
+.reward-text {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    bottom: 35px;
+    left: 35px;
+    padding: 12px 28px;
+    background: white;
+    border-radius: 35px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}

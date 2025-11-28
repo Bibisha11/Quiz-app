@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Brain - Start</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="start-screen">
+    <div class="container">
+        <h1 class="title">Battle Brain</h1>
+        <p class="subtitle">Your Daily Dose of Trivia</p>
+        <button class="start-btn" onclick="goToLogin()">START</button>
+    </div>
+    <header class="header">
+        <img src="logo.png" alt="Battle Brain Logo" class="logo">
+    
+    <nav class="navbar">
+        <a href="#" class="active" >About Us</a>
+        <a href="#" class="active">Contact us</a>
+        <a href="#" class="active">Privacy Policy</a>
+        <a href="#" class="active">Terms of Services</a>
+    </nav>
+</header>
+<div class="popup-info">
+    <h2>Welcome to Battle Brain!</h2>
+    <span class="info">Challenge yourself with daily trivia questions and boost your knowledge!</span>
+
+    <div class="btn-group">
+        <a href="info-btn continue-btn">Learn More</a>
+        <button class="info-btn exit-btn">Close</button>
+        </div>
+</div>
+    <script>
+        function goToLogin() {
+            window.location.href = "login.html";
+        }
+        // const startBtn= document.querySelector('.start-btn');
+        // const popupinfo= document.querySelector('.popup-info');
+
+        // startBtn.onclick=() =>{
+        //     popup-info.classList.add('active');
+        // }
+    </script>
+</body>
+</html>
+

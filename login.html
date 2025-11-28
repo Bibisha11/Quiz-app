@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battle Brain - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-screen">
+    <div class="login-box">
+        <h1>Login</h1>
+        <form onsubmit="login(event)">
+            <input type="text" placeholder="Username/email" required>
+            <input type="password" placeholder="Password" required>
+            <div class="options">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button class="login-btn" type="submit">Login</button>
+        </form>
+
+        <p class="signup">or signup using</p>
+        <div class="social-login">
+            <button class="facebook"></button>
+            <button class="google"></button>
+        </div>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault(); // Stop form from reloading page
+            window.location.href = "homepage.html"; // Redirect after login
+        }
+    </script>
+</body>
+</html>

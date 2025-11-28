@@ -1,0 +1,160 @@
+/* RESET */
+html, body {
+     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* BACKGROUND */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://i.pinimg.com/736x/3f/a2/6e/3fa26e4fba360373b85d2ddd98d1f65e.jpg') no-repeat center/cover;
+    height: 100vh;
+    color: black;
+}
+
+/* MAIN PAGE WRAPPER */
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+/* HEADER */
+header {
+       display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.profile {
+     width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.menu {
+    font-size: 45px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* TITLE */
+.title {
+   font-size: 48px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* CATEGORY GRID */
+.btn-grid {
+     display: grid;
+    grid-template-columns: repeat(2, 350px);
+    gap: 20px;
+    margin: 40px auto;
+    justify-content: center;
+}
+
+/* CATEGORY BUTTON STYLE */
+.btn {
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 25px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    width: 275px;   /* FIXED */
+    height: 55px;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.25); /* Added shadow */
+    transition: 0.2s ease-in-out; 
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* SPORTS BUTTON COLORS (PASTEL GRADIENTS) */
+.red {
+    background:  #ff6f6f
+}
+
+.green {
+    background:  #63e673;
+}
+
+.yellow {
+    background: #ffdb6e;
+}
+
+.gold {
+    background: #e5c568;
+}
+
+/* OVERVIEW TITLE */
+.overview-title {
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* OVERVIEW GRID BOX */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 18px;
+    padding: 16px 0;
+    margin-bottom: 20px;
+
+    font-size: 15px;
+}
+
+.overview-grid strong {
+    font-size: 18px;
+}
+
+.quiz-stats {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.quiz-stats div {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* REWARD TEXT */
+.reward-text {
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+}
+
+/* BACK BUTTON */
+.back-btn {
+     position: absolute;
+    bottom: 40px;
+    left: 40px;
+    padding: 12px 30px;
+    background: white;
+    color: black;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Added shadow */
+    transition: 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}

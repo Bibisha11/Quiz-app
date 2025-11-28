@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Quiz</title>
+    <link rel="stylesheet" href="trigo.css">
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- Header -->
+    <div class="header">
+        <img src="https://i.pinimg.com/736x/f0/81/6e/f0816eaa4919b4239bdc807a7eb37832.jpg" class="profile">
+        <div class="menu">☰</div>
+    </div>
+
+    <h1 class="title">Trigonometry</h1>
+
+    <div class="top-row">
+        <span class="quiz-id">Quiz: 01</span>
+        <span id="timer">20 sec</span>
+    </div>
+
+    <hr class="divider">
+
+    <div class="question-box">
+        <p><strong>1.</strong> In a right triangle, one angle is 30°  
+           and the hypotenuse is 10 cm.  
+           What is the length of the opposite side?</p>
+    </div>
+
+    <div class="option-grid">
+        <button class="option" onclick="correctAnswer()">a. 5 cm</button>
+        <button class="option" onclick="wrong()">c. 10√3 cm</button>
+        <button class="option" onclick="wrong()">b. 5√3 cm</button>
+        <button class="option" onclick="wrong()">d. 3 cm</button>
+    </div>
+
+    <a href="math.html" class="back-btn">Back</a>
+
+</div>
+
+<!-- Overlay -->
+<div id="overlay"></div>
+
+<!-- Popup -->
+<div id="popup">
+    <h1>Hooray 🎉</h1>
+    <p>Well done, you got it right!</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    // TIMER
+   let timeLeft = 20;
+let timer = setInterval(function() {
+    timeLeft--;
+    document.getElementById("timer").textContent = timeLeft + " sec";
+
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+        document.getElementById("timer").textContent = "Time's up!";
+    }
+}, 1000);
+
+/** POPUP FUNCTIONS **/
+function correctAnswer() {
+    clearInterval(timer); // ⛔ STOP TIMER WHEN CORRECT
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+}
+
+function wrong() {
+    alert("Wrong answer! Try again.");
+}
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry Quiz</title>
+    <link rel="stylesheet" href="trigo.css">
+
+    <style>
+        /* --- POPUP STYLES --- */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 350px;
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            font-family: "Poppins", sans-serif;
+            z-index: 9999;
+            animation: pop 0.3s ease-out;
+        }
+
+        #popup h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #popup p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #popup button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #popup button:hover {
+            background: #333;
+        }
+
+        /* Popup Animation */
+        @keyframes pop {
+            from { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+            to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        }
+
+        /* Overlay background */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 9998;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="page-container">
+
+    <!-- Oval Header -->
+    <div class="header">
+        <img src="https://i.pinimg.com/736x/f0/81/6e/f0816eaa4919b4239bdc807a7eb37832.jpg" class="profile">
+        <div class="menu">☰</div>
+    </div>
+
+    <br>
+
+    <h1 class="title">Trigonometry</h1>
+
+    <div class="top-row">
+        <span class="quiz-id">Quiz: 01</span>
+        <span id="timer">20 sec</span>
+    </div>
+
+    <hr class="divider">
+
+    <div class="question-box">
+        <p>
+            <strong>1.</strong> In a right triangle, one of the acute angles is 30°  
+            and the hypotenuse is 10 cm.  
+            What is the length of the side opposite the 30° angle?
+        </p>
+    </div>
+
+    <br>
+
+    <div class="option-grid">
+        <!-- Correct Answer -->
+        <button class="option" onclick="correctAnswer()">a. 5 cm</button>
+
+        <!-- Wrong Answers -->
+        <button class="option" onclick="wrong()">c. 10√3 cm</button>
+        <button class="option" onclick="wrong()">b. 5√3 cm</button>
+        <button class="option" onclick="wrong()">d. 3 cm</button>
+    </div>
+
+    <a href="math.html" class="back-btn">Back</a>
+
+</div>
+
+<!-- OVERLAY BACKGROUND -->
+<div id="overlay"></div>
+
+<!-- POPUP -->
+<div id="popup">
+    <h1>Hooray 🎉</h1>
+    <p>Well done, you got it right!</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    /** TIMER **/
+    let timeLeft = 20;
+    let timer = setInterval(function() {
+        timeLeft--;
+        document.getElementById("timer").textContent = timeLeft + " sec";
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            document.getElementById("timer").textContent = "Time's up!";
+        }
+    }, 1000);
+
+    /** POPUP FUNCTIONS **/
+    function correctAnswer() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function wrong() {
+        alert("Wrong answer! Try again.");
+    }
+
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
