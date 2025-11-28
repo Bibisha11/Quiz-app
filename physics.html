@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trigonometry Quiz</title>
-    <link rel="stylesheet" href="trigo.css">
+    <title>Physics Quiz</title>
+    <link rel="stylesheet" href="physics.css">
 </head>
 <body>
 
@@ -13,48 +13,54 @@
     <!-- Header -->
     <div class="header">
         <img src="https://i.pinimg.com/736x/f0/81/6e/f0816eaa4919b4239bdc807a7eb37832.jpg" class="profile">
+        <h1 class="title">Physics</h1>
         <div class="menu">☰</div>
     </div>
 
-    <h1 class="title">Trigonometry</h1>
-
+    <!-- Top Row -->
     <div class="top-row">
-        <span class="quiz-id">Quiz: 01</span>
+        <span class="quiz-id">Quiz:01</span>
         <span id="timer">20 sec</span>
     </div>
 
     <hr class="divider">
 
+    <!-- Question -->
     <div class="question-box">
-        <p><strong>1.</strong> In a right triangle, one angle is 30°  
-           and the hypotenuse is 10 cm.  
-           What is the length of the opposite side?</p>
+        <p>
+            <strong>1.</strong>
+            A ball is thrown straight up with an initial speed of 20 m/s.
+            Ignoring air resistance, how long will it take to reach its highest point?
+        </p>
     </div>
 
+    <!-- Options -->
     <div class="option-grid">
-        <button class="option" onclick="correctAnswer()">a. 5 cm</button>
-        <button class="option" onclick="wrong()">c. 10√3 cm</button>
-        <button class="option" onclick="wrong()">b. 5√3 cm</button>
-        <button class="option" onclick="wrong()">d. 3 cm</button>
+
+        <button class="option" onclick="correctAnswer()">a. 1 second</button>
+        <button class="option" onclick="wrong()">c. 4 second</button>
+
+        <button class="option" onclick="wrong()">b. 2 second</button>
+        <button class="option" onclick="wrong()">d. 10 second</button>
+
     </div>
 
-    <a href="math.html" class="back-btn">Back</a>
+    <a href="science.html" class="back-btn">Back</a>
 
 </div>
 
-<!-- Overlay -->
+<!-- OVERLAY -->
 <div id="overlay"></div>
 
-<!-- Popup -->
+<!-- POPUP -->
 <div id="popup">
     <h1>Hooray 🎉</h1>
-    <p>Well done, you got it right!</p>
-    <button onclick="closePopup()">Close</button>
+    <p>Correct Answer!</p>
+    <button class="close-btn" onclick="closePopup()">OK</button>
 </div>
 
 <script>
-    // TIMER
-   /** TIMER **/
+/** TIMER **/
 let timeLeft = 20;
 let timer = setInterval(updateTimer, 1000);
 let timeUp = false;

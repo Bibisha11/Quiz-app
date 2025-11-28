@@ -1,0 +1,192 @@
+/* Full layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Background */
+body {
+     font-family: "Poppins", sans-serif;
+    background: url("https://i.pinimg.com/736x/3f/a2/6e/3fa26e4fba360373b85d2ddd98d1f65e.jpg") 
+                no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile {
+    position: absolute;
+    left: 40px;
+    top: 20px;
+     width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Page wrapper */
+.page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+/* Oval Header */
+/* .header-oval {
+    width: 100%;
+    height: 160px;
+    background: #dba16a;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Icon */
+.icon {
+    width: 60px;
+    margin-right: 10px;
+}
+
+/* Title */
+.title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+/* Menu icon */
+.menu {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Top row */
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 20px 10px 5px 10px;
+}
+
+/* Divider */
+.divider {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+/* Question box */
+.question-box {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 10px 20px 10px;
+    left: 40px;
+}
+
+/* Option grid */
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* Individual option */
+.option {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px rgba(0,0,0,0.25);
+    transition: 0.2s;
+}
+
+/* Hover effect */
+.option:hover {
+    transform: scale(1.05);
+}
+
+/* Back Button */
+.back-btn {
+   position: absolute;
+    bottom: 40px;
+    left: 40px;
+    padding: 12px 30px;
+    background: white;
+    color: black;
+    border-radius: 35px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* Added shadow */
+    transition: 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+}
+
+     #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            width: 80%;
+            max-width: 350px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            z-index: 9999;
+            animation: pop .3s ease;
+        }
+        #popup h1 { font-size: 32px; }
+        #popup p { font-size: 18px; }
+        #popup button {
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 9998;
+        }
+
+        @keyframes pop {
+            from { transform: translate(-50%,-50%) scale(.7); opacity: 0; }
+            to { transform: translate(-50%,-50%) scale(1); opacity: 1; }
+        }
